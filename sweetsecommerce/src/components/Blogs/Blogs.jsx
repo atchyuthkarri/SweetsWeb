@@ -22,13 +22,13 @@ const Blogs = () => {
 
                 <div>
                     <img src={blogimg2} alt="" />
-                    <h3>Satisfy your sweet tooth: Unveiling G.Pulla Reddy-Hyderabad's Top Most Sweet Shop</h3>
+                    <h3>Bellam Sunnundalu: Naturally Sweetened Goodness with Timeless Flavor</h3>
                     <p>Read More</p>
                 </div>
 
                 <div>
                     <img src={blogimg3} alt="" />
-                    <h3>G Pulla Reddy Sweets Experience Tradition With Every Bite</h3>
+                    <h3> The Sweet Symbol of Joy, Ritual, and Celebration</h3>
                     <p>Read More</p>
                 </div>
             </div>
