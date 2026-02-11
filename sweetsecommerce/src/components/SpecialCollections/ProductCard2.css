@@ -43,8 +43,8 @@ item-image img {
   width: 180px;
   height: 45px;
   border: none;
-  background: #444444;
-  color: #ffffff;
+  background: var(--button-bg);
+  color: var(--button-text);
   font-size: 16px;
   border-radius: 24px;
   -webkit-border-radius: 24px;
@@ -55,11 +55,11 @@ item-image img {
 .countbutton{
   width: 120px;
   height: 45px;
-  border: #444444 2px solid;
+  border: var(--heading-color) 2px solid;
   font-size: 16px;
   font-weight: 600;
-  color: #444444;
-  background: #ffffff;
+  color: var(--heading-color);
+  background: var(--surface-color);
   border-radius:28px;
   -webkit-border-radius:28px;
   -moz-border-radius:28px;

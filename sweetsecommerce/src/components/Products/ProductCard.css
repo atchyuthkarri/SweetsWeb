@@ -33,22 +33,43 @@
   align-items: center;
 }
 
+.countbutton {
+  width: 120px;
+  height: 40px;
+  font-size: 14px;
+  font-weight: 800;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 999px;
+  display: grid;
+  grid-template-columns: 34px 1fr 34px;
+  align-items: center;
+  justify-items: center;
+  background: transparent;
+}
+
+.qty-step {
+  width: 34px;
+  height: 38px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.qty-value {
+  font-size: 14px;
+}
+
 .cartbutton {
   width: 150px;
   height: 40px;
   font-size: 14px;
 }
 
-.countbutton {
-  width: 100px;
-  height: 40px;
-  font-size: 14px;
-  font-weight: 800;
-}
-
 
 @media (max-width: 768px) {
-  .item {
+  .card-item {
     min-width: 320px;
   }
 
@@ -60,18 +81,18 @@
   }
 
   .cartbutton {
-    width: 10px;
-    font-size: 2px;
+    width: 150px;
+    font-size: 14px;
   }
 
   .countbutton {
-    width: 180px;
+    width: 120px;
     font-size: 13px;
   }
 }
 
 @media (max-width:480px){
-  .item {
-    max-width: 200px;
+  .card-item {
+    min-width: 280px;
   }
 }

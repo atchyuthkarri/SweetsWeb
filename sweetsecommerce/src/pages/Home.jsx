@@ -7,10 +7,11 @@ import SpecialCollection from '../components/SpecialCollections/SpecialCollectio
 import TraditionBanner from '../components/TraditionBanner/TraditionBanner'
 import Blogs from '../components/Blogs/Blogs'
 import Footer from '../components/Footer/Footer'
+import PageWrapper from '../components/PageWrapper'
 
 const Home = () => {
   return (
-    <div>
+    <PageWrapper>
         <Navbar/>
         <Hero/>
         <Product/>
@@ -19,8 +20,7 @@ const Home = () => {
         <TraditionBanner/>
         <Blogs/>
         <Footer/>
-    </div>
-
+    </PageWrapper>
   )
 }
 
