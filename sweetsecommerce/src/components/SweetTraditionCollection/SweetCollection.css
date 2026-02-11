@@ -1,0 +1,186 @@
+/* ===== Section Heading ===== */
+.headings {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #444;
+  font-size: 35px;
+  font-family: "M-Heading-Font";
+  font-weight: 500;
+}
+
+/* ===== Section Layout ===== */
+.SweetCollection {
+  width: 100%;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.SweetCollection-description {
+  max-width: 700px;
+  text-align: center;
+}
+
+.SweetCollection-description p {
+  font-family: "M-Body-Font";
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* ===== Swiper ===== */
+.mySwiper {
+  width: 100%;
+}
+
+.mySwiper .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ===== Card ===== */
+.collection-card {
+  width: 100%;
+  height: clamp(220px, 38vh, 420px); /* RESPONSIVE HEIGHT */
+  border-radius: 18px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+/* ===== Background Image Layer ===== */
+.card-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.6s ease;
+  will-change: transform;
+  z-index: 1;
+}
+
+/* Zoom ONLY background */
+.collection-card:hover .card-bg {
+  transform: scale(1.06);
+}
+
+/* ===== Card Content ===== */
+.card-content {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+/* ===== Explore Button ===== */
+.btn-explore {
+  width: 100%;
+  background: #f4f4f4;
+  color: #444;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+
+  opacity: 0;
+  transform: translateY(25px);
+  pointer-events: none;
+
+  transition: opacity 0.35s ease, transform 0.35s ease,
+    background 0.3s ease;
+}
+
+.btn-explore:hover {
+  background: #444;
+  color: #f4f4f4;
+}
+
+.collection-card:hover .btn-explore {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* ===== Title below Card ===== */
+.card-title {
+  font-size: 20px;
+  color: #444;
+  margin: 14px 0;
+  letter-spacing: 1.4px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif;
+  font-weight: 400;
+  text-align: center;
+}
+
+/* ===== TABLET ===== */
+@media (max-width: 1024px) {
+  .mySwiper {
+    width: 95%;
+  }
+
+  .headings {
+    font-size: 32px;
+  }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .mySwiper {
+    width: 100%;
+  }
+
+  .btn-explore {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .headings {
+    font-size: 28px;
+  }
+
+  .SweetCollection-description p {
+    font-size: 16px;
+  }
+
+  .card-title {
+    font-size: 16px;
+  }
+}
+/* ===== SMALL DEVICES IMAGE CONTROL ===== */
+@media (max-width: 768px) {
+  .collection-card {
+    
+    width: 100%; /* smaller card height */
+  }
+
+  .card-bg {
+    background-size: 100%; /* reduce image size */
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  /* Disable zoom on mobile for better UX */
+  .collection-card:hover .card-bg {
+    transform: scale(1);
+  }
+}
+
+/* ===== EXTRA SMALL DEVICES ===== */
+@media (max-width: 480px) {
+  .collection-card {
+    height: 200px;
+  }
+
+  .card-bg {
+    background-size: 85%;
+  }
+}
