@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../styles/Navbar.css";
-import logo from "../assets/gprs_new_logo_red.svg";
+import logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -26,7 +26,7 @@ const Navbar = () => {
 
           {/* Logo */}
          <div className="logo">
-            <Link to="/">
+            <Link to="/" style={{ textDecoration: 'none', color: 'inherit'  ,fontFamily: 'M-Heading-Font' ,fontSize: '24px'}}>
               <img src={logo} alt="logo" />
             </Link>
           </div>
@@ -48,11 +48,11 @@ const Navbar = () => {
             </div>
           </div>
 
-          <div className="carticon">
+          {/* <div className="carticon">
           <span class="material-symbols-outlined">
           shopping_cart
           </span>
-          </div>
+          </div> */}
 
         </div>
       </nav>
