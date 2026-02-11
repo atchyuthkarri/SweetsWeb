@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../styles/Navbar.css";
 import logo from "../assets/gprs_new_logo_red.svg";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -24,19 +25,21 @@ const Navbar = () => {
           </div>
 
           {/* Logo */}
-          <div className="logo">
-            <img src={logo} alt="logo" />
+         <div className="logo">
+            <Link to="/">
+              <img src={logo} alt="logo" />
+            </Link>
           </div>
 
           {/* Nav Links */}
-          <ul className={`navlinks ${menuOpen ? "open" : ""}`}>
-            <li><a href="/">Sweets</a></li>
-            <li><a href="/">Snacks & More</a></li>
-            <li><a href="/">Traditional Pickles</a></li>
-            <li><a href="/">Gifting</a></li>
-            <li><a href="/">Our Stores</a></li>
-            <li><a href="/">My Account</a></li>
-          </ul>
+         <ul className={`navlinks ${menuOpen ? "open" : ""}`}>
+          <li><Link to="/products" onClick={() => setMenuOpen(false)}>Sweets</Link></li>
+          <li><Link to="/products" onClick={() => setMenuOpen(false)}>Snacks & More</Link></li>
+          <li><Link to="/" onClick={() => setMenuOpen(false)}>Traditional Pickles</Link></li>
+          <li><Link to="/" onClick={() => setMenuOpen(false)}>Gifting</Link></li>
+          <li><Link to="/" onClick={() => setMenuOpen(false)}>Our Stores</Link></li>
+          <li><Link to="/" onClick={() => setMenuOpen(false)}>My Account</Link></li>
+        </ul>
 
           {/* Social Icons */}
           <div className="socialmediaicons">

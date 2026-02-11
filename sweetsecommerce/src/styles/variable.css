@@ -1,6 +1,24 @@
 :root {
-    --primary-color: #8b1c1c;
-    --secondary-color: #f6c453;
-    --bg-color: #fffaf5;
-    --text-color: #2e1b1b;
+    --bg-color: #fff8f1;
+    --text-color: #231515;
+
+    --primary-color: #9f2b2e;
+    --secondary-color: #d4a017;
+
+    --surface-color: #ffffff;
+    --surface-muted: #f4efeb;
+    --heading-color: #3f3f3f;
+    --muted-text: rgba(0, 0, 0, 0.55);
+    --border-color: rgba(0, 0, 0, 0.08);
+    --shadow-color: rgba(0, 0, 0, 0.1);
+
+    --button-bg: #3f3f3f;
+    --button-text: #ffffff;
+
+    --success-color: #2f9e44;
+    --info-color: #9f2b2e;
+
+    --swiggy-color: #ff7a1a;
+    --zomato-color: #e23744;
+    --whatsapp-color: #39b54a;
   }
