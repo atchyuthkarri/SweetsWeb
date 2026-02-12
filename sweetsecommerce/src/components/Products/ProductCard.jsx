@@ -24,7 +24,6 @@ const ProductCard = ({ item, qty = 1, onIncrement, onDecrement }) => {
             </div> */}
 
         </div>
-
     </div>
   );
 };

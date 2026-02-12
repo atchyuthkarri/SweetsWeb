@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import { Link, Navigate, useParams } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer/Footer'
@@ -15,6 +15,12 @@ const ProductDetailPage = () => {
 
   const [qty, setQty] = useState(1)
   const [weight, setWeight] = useState(product?.weights?.[1] || product?.weights?.[0] || '400gm')
+
+  useEffect(() => {
+    if (!product) return
+    setQty(1)
+    setWeight(product?.weights?.[1] || product?.weights?.[0] || '400gm')
+  }, [product])
 
   const recommended = useMemo(() => {
     if (!product) return []
