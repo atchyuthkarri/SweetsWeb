@@ -10,7 +10,7 @@ const ProductCard2 = ({ item }) => {
         <div className="item-details">
             <p>{item.name}</p>
             <p style={{color:"var(--primary-color)"}}>{item.price}</p>
-            <div className="buttons">
+            {/* <div className="buttons">
                 <button className="countbutton">
                 <span >
                     -
@@ -21,7 +21,7 @@ const ProductCard2 = ({ item }) => {
                     </span>
                 </button>
                 <button className="cartbutton">ADD TO BAG</button>
-            </div>
+            </div> */}
 
         </div>
 
