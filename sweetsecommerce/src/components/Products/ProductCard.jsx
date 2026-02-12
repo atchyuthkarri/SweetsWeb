@@ -10,7 +10,7 @@ const ProductCard = ({ item, qty = 1, onIncrement, onDecrement }) => {
         <div className="item-details">
             <p>{item.name}</p>
             <p style={{color:"var(--primary-color)"}}>{item.price}</p>
-            <div className="buttons">
+            {/* <div className="buttons">
                 <div className="countbutton" role="group" aria-label={`Quantity for ${item.name}`}>
                   <button type="button" className="qty-step" onClick={onDecrement} aria-label="Decrease quantity">
                     -
@@ -21,10 +21,9 @@ const ProductCard = ({ item, qty = 1, onIncrement, onDecrement }) => {
                   </button>
                 </div>
                 <button className="cartbutton">ADD TO BAG</button>
-            </div>
+            </div> */}
 
         </div>
-
     </div>
   );
 };

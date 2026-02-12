@@ -1,14 +1,12 @@
 import React from "react";
 import "./SpecialCollection.css";
-// import ProductCard from "./ProductCard";
+import ProductCard from "../Products/ProductCard";
 
 import Ariselu from "../../assets/Ariselu.webp";
 import Badusha from "../../assets/Badusha.webp";
 import Bandar_ladoo from "../../assets/Bandar_ladoo.webp";
 
 import DryfruitLaddu from "../../assets/Dry-Fruitladdu.webp";
-import ProductCard2 from './ProductCard2';
-
 
 const SpecialCollection = () => {
   const bestSellers = [
@@ -47,7 +45,7 @@ const SpecialCollection = () => {
 
       <div className="product-grid">
         {bestSellers.map((item) => (
-          <ProductCard2 key={item.id} item={item} />
+          <ProductCard key={item.id} item={item} />
         ))}
       </div>
     </section>
