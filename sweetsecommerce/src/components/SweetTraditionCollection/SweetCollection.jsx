@@ -33,25 +33,18 @@ const SweetCollection = () => {
       </div>
 
       <Swiper
-  spaceBetween={10}
-  pagination={{ clickable: true }}
+  spaceBetween={20}
   loop={true}
+  speed={800}
+  grabCursor={true}
   autoplay={{ delay: 2500, disableOnInteraction: false }}
   modules={[Pagination, Autoplay]}
   className="mySwiper"
   breakpoints={{
-    320: {
-      slidesPerView: 1.3,
-    },
-    480: {
-      slidesPerView: 1.8,
-    },
-    768: {
-      slidesPerView: 2.5,
-    },
-    1024: {
-      slidesPerView: 3,
-    },
+    320: { slidesPerView: 1 },
+    480: { slidesPerView: 2 },
+    768: { slidesPerView: 3 },
+    1024: { slidesPerView: 4 },
   }}
 >
   {collections.map((item) => (
