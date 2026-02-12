@@ -1,62 +1,66 @@
 .card-item {
-  min-width: 360px;
-  height: 100%;
+  min-width: 400px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px !important;
 }
 
 .item-image {
-  width: 100%;
-  height: 180px;
+  width: 100% !important;
+  height: 360px !important;
   overflow: hidden;
-  border-radius: 20px;
-  
+  border-radius: 26px ;
+  -webkit-border-radius: 26px ;
+  -moz-border-radius: 26px ;
+  -ms-border-radius: 26px ;
+  -o-border-radius: 26px ;
 }
 
 .item-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  
+  object-fit: cover;   /* looks better than contain */
 }
 
-.card-item .item-details {
-  padding: 100px;
+.item-details {
+  padding: 8px 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap: 8px;
-  font-size: 16px;
+  gap: 6px;
+  font-size: 25px;
+  text-align: center;
 }
 
 .buttons {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
   align-items: center;
 }
 
 .countbutton {
-  width: 120px;
-  height: 40px;
+  width: 110px;
+  height: 38px;
   font-size: 14px;
-  font-weight: 800;
-  border: 1px solid rgba(0, 0, 0, 0.25);
+  font-weight: 700;
+  border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 999px;
   display: grid;
-  grid-template-columns: 34px 1fr 34px;
+  grid-template-columns: 32px 1fr 32px;
   align-items: center;
   justify-items: center;
-  background: transparent;
+  background: white;
 }
 
 .qty-step {
-  width: 34px;
-  height: 38px;
+  width: 32px;
+  height: 36px;
   border: 0;
   background: transparent;
   cursor: pointer;
   font-size: 16px;
-  line-height: 1;
 }
 
 .qty-value {
@@ -64,37 +68,7 @@
 }
 
 .cartbutton {
-  width: 150px;
-  height: 40px;
+  width: 140px;
+  height: 38px;
   font-size: 14px;
-}
-
-
-@media (max-width: 768px) {
-  .card-item {
-    min-width: 320px;
-  }
-
-  .buttons{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .cartbutton {
-    width: 150px;
-    font-size: 14px;
-  }
-
-  .countbutton {
-    width: 120px;
-    font-size: 13px;
-  }
-}
-
-@media (max-width:480px){
-  .card-item {
-    min-width: 280px;
-  }
 }

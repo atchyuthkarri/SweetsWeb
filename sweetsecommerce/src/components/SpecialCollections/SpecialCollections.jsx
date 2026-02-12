@@ -1,6 +1,6 @@
 import React from "react";
 import "./SpecialCollection.css";
-import ProductCard from "./ProductCard";
+import ProductCard from "../Products/ProductCard";
 
 import Ariselu from "../../assets/Ariselu.webp";
 import Badusha from "../../assets/Badusha.webp";
