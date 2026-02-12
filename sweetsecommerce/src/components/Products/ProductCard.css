@@ -72,3 +72,56 @@
   height: 38px;
   font-size: 14px;
 }
+@media (max-width: 1024px) {
+  .card-item {
+    max-width: 320px;
+  }
+
+  .item-image {
+    height: 300px;
+  }
+
+  .item-details {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-item {
+    max-width: 260px;
+  }
+
+  .item-image {
+    height: 240px;
+  }
+
+  .item-details {
+    font-size: 16px;
+  }
+
+  .cartbutton {
+    width: 120px;
+    height: 36px;
+    font-size: 13px;
+  }
+
+  .countbutton {
+    width: 100px;
+    height: 34px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-item {
+    max-width: 220px;
+  }
+
+  .item-image {
+    height: 200px;
+  }
+
+  .item-details {
+    font-size: 14px;
+  }
+}
