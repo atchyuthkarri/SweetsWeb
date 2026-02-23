@@ -88,7 +88,7 @@
 .hamburger span {
   width: clamp(18px, 3vw, 25px);
   height: 3px;
-  background: var(--text-color);
+  background: var(--primary-color);
   border-radius: 5px;
   transition: 0.3s ease;
 }
@@ -123,7 +123,7 @@
 
 .carticon .material-symbols-outlined {
   font-size: clamp(20px, 3vw, 24px);
-  color: var(--text-color);
+  color: var(--primary-color);
 }
 
 /* Menu overlay */
