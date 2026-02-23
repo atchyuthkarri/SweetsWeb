@@ -1,14 +1,13 @@
 import React from "react";
-import banner from "../../assets/banner_2.jpeg";
-import banner2 from "../../assets/banner1.jpeg";
-import banner3 from "../../assets/banner3.jpeg";
+import banner from "../../assets/Tiyyagundhiii_files/banner1.png";
+import banner2 from "../../assets/Tiyyagundhiii_files/banner2.png";
+import banner3 from "../../assets/Tiyyagundhiii_files/banner3.png";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { Pagination, Autoplay } from "swiper/modules";
 
 import "./Hero.css";
 
@@ -17,8 +16,7 @@ const Hero = () => {
     <section className="hero">
       {/* Carousel */}
       <Swiper
-        modules={[Navigation, Pagination, Autoplay]}
-        navigation
+        modules={[Pagination, Autoplay]}
         pagination={{ clickable: true }}
         autoplay={{ delay: 3000 }}
         loop={true}
@@ -36,7 +34,6 @@ const Hero = () => {
           <img src={banner3} alt="Sweets Banner" />
         </SwiperSlide>
       </Swiper>
-
     </section>
   );
 };
