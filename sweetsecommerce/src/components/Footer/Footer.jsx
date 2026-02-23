@@ -45,7 +45,13 @@ const Footer = () => {
 
   return (
     <footer className="footer">
-      <div className="footer-top">
+      <div className="footer-header">
+        <div className="footer-logo">
+          <h2 className="footer-brand">Kwality Sweets</h2>
+        </div>
+      </div>
+      
+      <div className="footer-content">
         {footerData.map((col, index) => (
           <div className="footer-col" key={index}>
             <h3
@@ -57,11 +63,8 @@ const Footer = () => {
               {col.title}
               <span className="arrow">{openIndex === index ? "−" : "+"}</span>
             </h3>
-
             <ul
-              className={`footer-links ${
-                openIndex === index ? "open" : ""
-              }`}
+              className={`footer-links ${openIndex === index ? "open" : ""}`}
             >
               {col.links.map((link, i) => (
                 <li key={i}>
@@ -73,16 +76,28 @@ const Footer = () => {
         ))}
 
         <div className="footer-col contact">
-          <h3 className="footer-title static">Corporate Office</h3>
-          <p>xxxxxxxxxxxxxx</p>
-          <p>Begumpet, Hyderabad</p>
-          <p>📞 +91 xxxxxxxxxxxx</p>
-          <p>✉ support@xxxxxxxxx.com</p>
+          <h3 className="footer-title static">Contact</h3>
+          <div className="contact-info">
+            <div className="contact-item">
+              <span className="contact-icon">📍</span>
+              <span>Hyderabad, India</span>
+            </div>
+            <div className="contact-item">
+              <span className="contact-icon">📞</span>
+              <span>support@kwalitysweets.com</span>
+            </div>
+            <div className="contact-item">
+              <span className="contact-icon">📱</span>
+              <span>+91 XXXXXXXXXX</span>
+            </div>
+          </div>
         </div>
       </div>
 
       <div className="footer-bottom">
-        <p>© AK. All Rights Reserved</p>
+        <div className="footer-copyright">
+          <p> 1965-2025 Kwality Sweets. All Rights Reserved.</p>
+        </div>
       </div>
     </footer>
   );

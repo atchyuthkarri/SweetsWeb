@@ -2,12 +2,12 @@ import { motion } from "framer-motion";
 
 const PageWrapper = ({ children }) => {
   const variants = {
-    initial: { opacity: 0, scale: 0.95, y: 50 },
+    initial: { opacity: 0, scale: 0.95, y: 30 },
     animate: { opacity: 1, scale: 1, y: 0 },
-    exit: { opacity: 0, scale: 1.05, y: -50 }
+    exit: { opacity: 0, scale: 1.05, y: -30 }
   };
 
-  const transition = { duration: 0.6, ease: "easeInOut" };
+  const transition = { duration: 0.4, ease: "easeInOut" };
 
   return (
     <motion.div

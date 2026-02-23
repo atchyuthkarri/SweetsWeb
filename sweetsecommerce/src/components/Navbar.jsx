@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const userTier = "kwality"; // String value to control cart visibility
 
   return (
     <>
@@ -48,11 +49,14 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* <div className="carticon">
-          <span class="material-symbols-outlined">
-          shopping_cart
-          </span>
-          </div> */}
+          {/* Cart Icon - Only visible if userTier is "kwality" */}
+          {userTier === "kwality" && (
+            <div className="carticon">
+              <span class="material-symbols-outlined">
+                shopping_cart
+              </span>
+            </div>
+          )}
 
         </div>
       </nav>

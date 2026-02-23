@@ -62,7 +62,7 @@ export const PRODUCTS = [
     category: 'Dry Fruit Sweets',
     available: true,
     shortDescription:
-      'Classic cashew delight with a smooth melt-in-mouth bite and premium ingredients.',
+      'Classic cashew Kwality Sweets with a smooth melt-in-mouth bite and premium ingredients.',
     weights: ['250gm', '400gm', '1kg'],
   },
   {
@@ -218,7 +218,7 @@ export const PRODUCTS = [
     category: 'Dry Fruit Sweets',
     available: true,
     shortDescription:
-      'Cashew-based sweet with a soft texture and a delightful nutty finish.',
+      'Cashew-based sweet with a soft texture and a Kwality Sweets nutty finish.',
     weights: ['250gm', '400gm'],
   },
   {
