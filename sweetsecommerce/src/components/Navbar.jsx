@@ -28,7 +28,7 @@ const Navbar = () => {
           {/* Logo */}
          <div className="logo">
             <Link to="/" style={{ textDecoration: 'none', color: 'inherit'  ,fontFamily: 'M-Heading-Font' ,fontSize: '24px'}}>
-              <img src={logo} alt="logo" />
+              <img src={logo} alt="Kwality Sweets Logo" />
             </Link>
           </div>
 
@@ -43,16 +43,15 @@ const Navbar = () => {
         </ul>
 
           {/* Social Icons */}
-          <div className="socialmediaicons">
+          {/* <div className="socialmediaicons">
             <div className="card">
-              {/* keep your social icons here */}
             </div>
-          </div>
+          </div> */}
 
           {/* Cart Icon - Only visible if userTier is "kwality" */}
           {userTier === "kwality" && (
             <div className="carticon">
-              <span class="material-symbols-outlined">
+              <span className="material-symbols-outlined">
                 shopping_cart
               </span>
             </div>

@@ -63,7 +63,7 @@
 
 .navlinks a:hover {
   color: var(--primary-color);
-  background: rgba(159, 43, 46, 0.1);
+  background: var(--primary-hover-bg);
 }
 
 .navlinks a:hover::after {
@@ -94,7 +94,7 @@
 }
 
 .hamburger:hover {
-  background: rgba(159, 43, 46, 0.1);
+  background: var(--primary-hover-bg);
 }
 
 /* X animation */
@@ -118,7 +118,7 @@
 }
 
 .carticon:hover {
-  background: rgba(159, 43, 46, 0.1);
+  background: var(--primary-hover-bg);
 }
 
 .carticon .material-symbols-outlined {
@@ -193,7 +193,7 @@
     left: 50%;
     width: 0;
     height: 2px;
-    background: white;
+    background: var(--surface-color);
     transition: all 0.3s ease;
     transform: translateX(-50%);
   }
