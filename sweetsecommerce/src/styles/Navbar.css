@@ -42,7 +42,7 @@
 
 .navlinks a {
   text-decoration: none;
-  color: var(--text-color);
+  color: var(--primary-color);
   transition: all 0.3s ease;
   padding: 4px 8px;
   border-radius: 4px;
