@@ -299,7 +299,7 @@ const ProductDetailPage = () => {
 
         .pd-price {
           font-size: 18px;
-          color: var(--heading-color);
+          color: #1e3a8a;
           font-weight: 700;
           margin-bottom: 6px;
         }
@@ -544,7 +544,7 @@ const ProductDetailPage = () => {
 
         .pd-reco-price {
           font-size: 12px;
-          color: var(--primary-color);
+          color: #1e3a8a;
           margin-bottom: 12px;
           font-weight: 600;
         }
