@@ -71,7 +71,7 @@ const Navbar = () => {
       <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
         <div className="navcontainer">
 
-          {/* Left side - Logo on desktop, Hamburger on mobile */}
+          {/* Left side - Hamburger on mobile */}
           <div className="nav-left">
             {/* Hamburger - Only visible on mobile */}
             <div
@@ -85,20 +85,6 @@ const Navbar = () => {
               <span></span>
               <span></span>
             </div>
-
-            {/* Logo - Left on desktop, hidden on mobile */}
-            <div className="logo desktop-logo">
-              <Link to="/" style={{ textDecoration: 'none', color: 'inherit', fontFamily: 'M-Heading-Font', fontSize: '24px' }}>
-                <p>Kwality Sweets</p>
-              </Link>
-            </div>
-          </div>
-
-          {/* Center - Logo on mobile only */}
-          <div className="logo mobile-logo">
-            <Link to="/" style={{ textDecoration: 'none', color: 'inherit', fontFamily: 'M-Heading-Font', fontSize: '24px' }}>
-              <p>Kwality Sweets</p>
-            </Link>
           </div>
 
           {/* Nav Links */}
