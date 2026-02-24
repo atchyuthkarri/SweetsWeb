@@ -611,9 +611,14 @@
 
 /* ================= PAGINATION ================= */
 
+.sp-radio-group {
+  display: grid;
+  gap: 20px;
+  padding: 8px 0 2px;
+}
+
 .sp-pagination {
   display: flex;
-  gap: 14px;
   justify-content: center;
   align-items: center;
   margin-top: 34px;
