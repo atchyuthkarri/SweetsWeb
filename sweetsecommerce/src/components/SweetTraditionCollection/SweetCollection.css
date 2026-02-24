@@ -1,33 +1,37 @@
 /* ===== Section Heading ===== */
 .headings {
   text-align: center;
-  margin-bottom: 10px;
-  color: #444;
-  font-size: 35px;
+  margin-bottom: clamp(4px, 1.5vw, 8px);
+  color: var(--primary-color);
+  font-size: clamp(20px, 4vw, 35px);
   font-family: "M-Heading-Font";
   font-weight: 500;
+  line-height: 1.2;
 }
 
 /* ===== Section Layout ===== */
 .SweetCollection {
   width: 100%;
-  padding: 80px 20px;
+  padding: clamp(20px, 4vw, 40px) clamp(12px, 3vw, 20px);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 50px;
+  gap: clamp(16px, 3vw, 30px);
+  box-sizing: border-box;
 }
 
 .SweetCollection-description {
-  max-width: 700px;
+  max-width: clamp(300px, 60%, 700px);
   text-align: center;
+  margin: 0 auto;
 }
 
 .SweetCollection-description p {
   font-family: "M-Body-Font";
-  font-size: 18px;
+  font-size: clamp(14px, 2.5vw, 18px);
   line-height: 1.6;
-  color: #555;
+  color: var(--muted-text);
+  margin: 0;
 }
 
 /* ===== Swiper ===== */
@@ -35,22 +39,131 @@
   width: 100%;
 }
 
-.mySwiper .swiper-slide {
+/* ===== Content Items ===== */
+.content-items {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  color: var(--text-color);
+  padding: clamp(30px, 4vw, 40px);
+  width: 60%;
+}
+
+.content-items h1 {
+  font-family: "M-Body-Font";
+  font-size: clamp(32px, 3vw, 20px);
+  font-weight: 300;
+  margin-top: clamp(40px, 4vw, 30px);
+  margin-bottom: clamp(20px, 4vw, 30px);
+  text-align: center;
+}
+
+.content-items img {
+  width: clamp(60px, 8vw, 120px);
+  max-width: clamp(300px, 60%, 700px);
+}
+
+.content-items div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: start;
+}
+
+/* ===== TABLET ===== */
+@media (max-width: 1200px) {
+  .SweetCollection {
+    gap: clamp(16px, 3vw, 30px);
+  }
+  
+  .content-items {
+    width: 80%;
+    padding: clamp(20px, 4vw, 40px);
+  }
+  
+  .content-items h1 {
+    font-size: clamp(28px, 4vw, 30px);
+  }
+  
+  .content-items img {
+    width: clamp(50px, 8vw, 120px);
+    max-width: clamp(250px, 60%, 700px);
+  }
+  
+  .content-description {
+    max-width: clamp(250px, 60%, 700px);
+  }
+}
+
+/* ===== SMALL DEVICES ===== */
+@media (max-width: 900px) {
+  .SweetCollection {
+    gap: clamp(12px, 3vw, 30px);
+  }
+  
+  .content-items {
+    width: 90%;
+    padding: clamp(15px, 4vw, 40px);
+  }
+  
+  .content-items h1 {
+    font-size: clamp(24px, 4vw, 30px);
+  }
+  
+  .content-items img {
+    width: clamp(45px, 8vw, 120px);
+    max-width: clamp(200px, 60%, 700px);
+  }
+  
+  .content-description {
+    max-width: clamp(200px, 60%, 700px);
+  }
+}
+
+/* ===== VERY SMALL DEVICES ===== */
+@media (max-width: 480px) {
+  .SweetCollection {
+    gap: clamp(10px, 3vw, 30px);
+  }
+  
+  .content-items {
+    width: 100%;
+    padding: clamp(12px, 4vw, 40px);
+  }
+  
+  .content-items h1 {
+    font-size: clamp(20px, 4vw, 30px);
+  }
+  
+  .content-items img {
+    width: clamp(40px, 8vw, 120px);
+    max-width: clamp(180px, 60%, 700px);
+  }
+  
+  .content-description {
+    max-width: clamp(180px, 60%, 700px);
+  }
 }
 
 /* ===== Card ===== */
 .collection-card {
   width: 100%;
-  height: clamp(220px, 38vh, 420px); /* RESPONSIVE HEIGHT */
-  border-radius: 18px;
+  height: clamp(280px, 35vh, 380px);
+  border-radius: clamp(12px, 2vw, 20px);
   position: relative;
   overflow: hidden;
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.collection-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
 /* ===== Background Image Layer ===== */
@@ -59,14 +172,14 @@
   inset: 0;
   background-size: cover;
   background-position: center;
-  transition: transform 0.6s ease;
+  transition: transform 0.4s ease;
   will-change: transform;
   z-index: 1;
 }
 
 /* Zoom ONLY background */
 .collection-card:hover .card-bg {
-  transform: scale(1.06);
+  transform: scale(1.05);
 }
 
 /* ===== Card Content ===== */
@@ -74,50 +187,44 @@
   position: relative;
   z-index: 3;
   width: 100%;
-  padding: 20px;
+  padding: clamp(12px, 2.5vw, 20px);
   text-align: center;
+  background: linear-gradient(to top, rgba(244, 244, 244, 0.95), transparent);
 }
 
 /* ===== Explore Button ===== */
 .btn-explore {
   width: 100%;
-  background: #f4f4f4;
-  color: #444;
-  border: none;
-  padding: 10px;
-  border-radius: 8px;
+  background: var(--surface-color);
+  color: var(--heading-color);
+  border: 1px solid var(--border-color);
+  padding: clamp(8px, 1.5vw, 12px);
+  border-radius: clamp(6px, 1vw, 8px);
   cursor: pointer;
   font-weight: 600;
-
-  opacity: 0;
-  transform: translateY(25px);
-  pointer-events: none;
-
-  transition: opacity 0.35s ease, transform 0.35s ease,
-    background 0.3s ease;
+  font-size: clamp(11px, 1.8vw, 14px);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
 }
 
 .btn-explore:hover {
-  background: #444;
-  color: #f4f4f4;
-}
-
-.collection-card:hover .btn-explore {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
+  background: var(--primary-color);
+  color: var(--button-text);
+  border-color: var(--primary-color);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(159, 43, 46, 0.2);
 }
 
 /* ===== Title below Card ===== */
 .card-title {
-  font-size: 20px;
-  color: #444;
-  margin: 14px 0;
-  letter-spacing: 1.4px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-    sans-serif;
+  font-size: clamp(14px, 2.2vw, 20px);
+  color: var(--heading-color);
+  margin: clamp(8px, 1.5vw, 14px) 0;
+  letter-spacing: clamp(0.5px, 0.2vw, 1.4px);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-weight: 400;
   text-align: center;
+  line-height: 1.3;
 }
 
 /* ===== TABLET ===== */
@@ -127,7 +234,27 @@
   }
 
   .headings {
-    font-size: 32px;
+    font-size: clamp(18px, 3.5vw, 32px);
+    margin-bottom: clamp(3px, 1vw, 6px);
+  }
+
+  .SweetCollection {
+    padding: clamp(16px, 3vw, 32px) clamp(10px, 2.5vw, 16px);
+    gap: clamp(12px, 2.5vw, 24px);
+  }
+
+  .collection-card {
+    height: clamp(240px, 32vh, 340px);
+    border-radius: clamp(10px, 1.8vw, 18px);
+  }
+
+  .card-content {
+    padding: clamp(10px, 2vw, 16px);
+  }
+
+  .btn-explore {
+    font-size: clamp(10px, 1.6vw, 13px);
+    padding: clamp(6px, 1.2vw, 10px);
   }
 }
 
@@ -140,47 +267,102 @@
   .btn-explore {
     opacity: 1;
     transform: translateY(0);
-    pointer-events: auto;
   }
 
   .headings {
-    font-size: 28px;
+    font-size: clamp(16px, 3vw, 28px);
+    margin-bottom: clamp(2px, 0.8vw, 4px);
   }
 
   .SweetCollection-description p {
-    font-size: 16px;
+    font-size: clamp(12px, 2.2vw, 16px);
   }
 
   .card-title {
-    font-size: 16px;
-  }
-}
-/* ===== SMALL DEVICES IMAGE CONTROL ===== */
-@media (max-width: 768px) {
-  .collection-card {
-    
-    width: 100%; /* smaller card height */
+    font-size: clamp(12px, 2vw, 16px);
+    margin: clamp(6px, 1.2vw, 12px) 0;
   }
 
-  .card-bg {
-    background-size: 100%; /* reduce image size */
-    background-repeat: no-repeat;
-    background-position: center;
+  .SweetCollection {
+    padding: clamp(12px, 2.5vw, 24px) clamp(8px, 2vw, 16px);
+    gap: clamp(8px, 2vw, 20px);
+  }
+
+  .collection-card {
+    height: clamp(200px, 28vh, 300px);
+    border-radius: clamp(8px, 1.5vw, 16px);
+  }
+
+  .card-content {
+    padding: clamp(8px, 1.8vw, 14px);
+  }
+
+  .btn-explore {
+    font-size: clamp(9px, 1.4vw, 12px);
+    padding: clamp(4px, 1vw, 8px);
   }
 
   /* Disable zoom on mobile for better UX */
   .collection-card:hover .card-bg {
     transform: scale(1);
   }
+
+  .collection-card:hover {
+    transform: translateY(-2px);
+  }
 }
 
 /* ===== EXTRA SMALL DEVICES ===== */
 @media (max-width: 480px) {
+  .mySwiper {
+    padding: 0 8px;
+  }
+
   .collection-card {
-    height: 200px;
+    height: clamp(180px, 25vh, 260px);
+    border-radius: clamp(6px, 1.2vw, 14px);
   }
 
   .card-bg {
-    background-size: 85%;
+    background-size: 90%;
+  }
+
+  .SweetCollection {
+    padding: clamp(8px, 2vw, 16px) clamp(6px, 1.5vw, 12px);
+    gap: clamp(6px, 1.5vw, 16px);
+  }
+
+  .headings {
+    font-size: clamp(14px, 2.5vw, 24px);
+    margin-bottom: clamp(1px, 0.5vw, 3px);
+  }
+
+  .card-title {
+    font-size: clamp(10px, 1.8vw, 14px);
+    margin: clamp(4px, 1vw, 10px) 0;
+  }
+
+  .btn-explore {
+    font-size: clamp(8px, 1.2vw, 11px);
+    padding: clamp(3px, 0.8vw, 6px);
+  }
+}
+
+@media (max-width: 360px) {
+  .SweetCollection {
+    padding: clamp(6px, 1.5vw, 12px) clamp(4px, 1.2vw, 8px);
+    gap: clamp(4px, 1.2vw, 12px);
+  }
+
+  .collection-card {
+    height: clamp(100px, 20vh, 200px);
+  }
+
+  .headings {
+    font-size: clamp(12px, 2.2vw, 20px);
+  }
+
+  .card-title {
+    font-size: clamp(9px, 1.8vw, 12px);
   }
 }

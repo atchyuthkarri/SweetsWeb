@@ -1,9 +1,10 @@
 .hero {
   position: relative;
   width: 100%;
-  height: calc(100vh - 12vh); /* full screen minus navbar */
+  height: calc(100vh - 18vh); /* full screen minus navbar */
   overflow: hidden;
-  padding: 12px;
+  padding: clamp(8px, 2vw, 16px);
+  box-sizing: border-box;
 }
 
 /* Swiper container */
@@ -12,13 +13,21 @@
   height: 100%;
 }
 
-/* Banner images */
-.hero-swiper img {
+/* Video container and videos */
+.video-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: clamp(12px, 2vw, 18px);
+  margin-top: 12vh;
+}
+
+.hero-video {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 18px;
-  margin-top: 12vh;
+  border-radius: clamp(12px, 2vw, 18px);
 }
 
 /* =========================
@@ -29,6 +38,7 @@
 @media (max-width: 1200px) {
   .hero {
     height: 70vh;
+    padding: clamp(6px, 1.5vw, 12px);
   }
 }
 
@@ -36,34 +46,66 @@
 @media (max-width: 992px) {
   .hero {
     height: 60vh;
-    padding: 10px;
+    padding: clamp(4px, 1vw, 10px);
   }
 
-  .hero-swiper img {
-    border-radius: 14px;
+  .video-container {
+    border-radius: clamp(10px, 1.5vw, 14px);
+    margin-top: 8vh;
+  }
+
+  .hero-video {
+    border-radius: clamp(10px, 1.5vw, 14px);
   }
 }
 
 /* Mobile devices */
 @media (max-width: 768px) {
   .hero {
-    height: 45vh;
-    padding: 8px;
+    height: 50vh;
+    padding: clamp(2px, 1vw, 6px);
   }
 
-  .hero-swiper img {
-    border-radius: 12px;
+  .video-container {
+    border-radius: clamp(8px, 1.5vw, 12px);
+    margin-top: 6vh;
+  }
+
+  .hero-video {
+    border-radius: clamp(8px, 1.5vw, 12px);
   }
 }
 
 /* Small phones */
 @media (max-width: 480px) {
   .hero {
-    height: 40vh;
-    padding: 6px;
+    height: 45vh;
+    padding: clamp(2px, 0.5vw, 4px);
   }
 
-  .hero-swiper img {
-    border-radius: 10px;
+  .video-container {
+    border-radius: clamp(6px, 1vw, 10px);
+    margin-top: 4vh;
+  }
+
+  .hero-video {
+    border-radius: clamp(6px, 1vw, 10px);
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 360px) {
+  .hero {
+    height: 40vh;
+    padding: 2px;
+  }
+
+  .video-container {
+    border-radius: 8px;
+    margin-top: 2vh;
+  }
+
+  .hero-video {
+    border-radius: 8px;
   }
 }

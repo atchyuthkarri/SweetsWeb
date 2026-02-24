@@ -1,14 +1,13 @@
 import React from "react";
-import banner from "../../assets/banner_2.jpeg";
-import banner2 from "../../assets/banner1.jpeg";
-import banner3 from "../../assets/banner3.jpeg";
+import video1 from "../../assets/hero.mp4";
+import video2 from "../../assets/hero2.mp4";
+import video3 from "../../assets/hero3.mp4";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { Pagination, Autoplay } from "swiper/modules";
 
 import "./Hero.css";
 
@@ -17,26 +16,57 @@ const Hero = () => {
     <section className="hero">
       {/* Carousel */}
       <Swiper
-        modules={[Navigation, Pagination, Autoplay]}
-        navigation
+        modules={[Pagination, Autoplay]}
         pagination={{ clickable: true }}
-        autoplay={{ delay: 3000 }}
+        autoplay={{ delay: 5000, disableOnInteraction: false }}
         loop={true}
         className="hero-swiper"
       >
         <SwiperSlide>
-          <img src={banner} alt="Sweets Banner" />
+          <div className="video-container">
+            <video 
+              autoPlay 
+              muted 
+              loop 
+              playsInline
+              className="hero-video"
+            >
+              <source src={video1} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </SwiperSlide>
 
         <SwiperSlide>
-          <img src={banner2} alt="Sweets Banner" />
+          <div className="video-container">
+            <video 
+              autoPlay 
+              muted 
+              loop 
+              playsInline
+              className="hero-video"
+            >
+              <source src={video2} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </SwiperSlide>
 
         <SwiperSlide>
-          <img src={banner3} alt="Sweets Banner" />
+          <div className="video-container">
+            <video 
+              autoPlay 
+              muted 
+              loop 
+              playsInline
+              className="hero-video"
+            >
+              <source src={video3} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </SwiperSlide>
       </Swiper>
-
     </section>
   );
 };

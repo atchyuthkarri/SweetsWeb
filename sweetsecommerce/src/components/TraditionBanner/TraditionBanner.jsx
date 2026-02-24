@@ -5,38 +5,47 @@ import purity from "../../assets/Purity.svg"
 import socialresponsibility from "../../assets/Social_Responsibility.svg"
 
 const TraditionBanner = () => {
+  const values = [
+    {
+      icon: traditional,
+      title: "Traditional",
+      description: "Crafting traditional Indian delicacies with love and expertise for generations. Each sweet tells a story of heritage, flavor, and sweet memories."
+    },
+    {
+      icon: purity,
+      title: "Purity",
+      description: "Made with our finest cattle ghee, ensuring each bite is a taste of pure bliss and authentic tradition."
+    },
+    {
+      icon: socialresponsibility,
+      title: "Social Responsibility",
+      description: "Establishing schools and colleges to nurture minds and uplift communities for a brighter future."
+    }
+  ];
+
   return (
-    <>
-    <div className='banner'>
-            <h1>Our Sweet Traditions</h1>
-        <div className='banner-content'>
-            <div className='content-items'>
-                <img src={traditional} alt="" />
-                <div className='content-description'>
-                    <h1>Traditional</h1>
-                    <p>From humble beginnings in a small town to a beloved household name, We have been crafting traditional Indian delicacies with love and expertise for generations. Each sweet tells a story of heritage, flavor, and sweet memories shared across families.</p>
-                </div>
+    <section className="tradition-banner">
+      <div className="banner-container">
+        <header className="banner-header">
+          <h1 className="banner-title">Our Values</h1>
+          <p className="banner-subtitle">Tradition, purity, and community</p>
+        </header>
+        
+        <div className="values-grid">
+          {values.map((value, index) => (
+            <div key={index} className="value-card">
+              <div className="value-icon">
+                <img src={value.icon} alt={value.title} />
+              </div>
+              <div className="value-content">
+                <h2 className="value-title">{value.title}</h2>
+                <p className="value-description">{value.description}</p>
+              </div>
             </div>
-
-            <div className='content-items'>
-                <img src={purity} alt="" />
-                <div className='content-description'>
-                    <h1>Purity</h1>
-
-                    <p>Crafted with purity and tradition, our sweets are made with our finest cattle ghee, ensuring each bite is a taste of pure bliss.</p>
-                </div>
-            </div>
-
-            <div className='content-items'>
-                <img src={socialresponsibility} alt="" />
-                <div className='content-description'>
-                    <h1>Social Responsibility</h1>
-                    <p>We not only delighted taste buds but also nurtured minds. By establishing schools and colleges for students, we embody a commitment to uplift the community and pave the way for a brighter future.</p>
-                </div>
-            </div>
+          ))}
         </div>
-    </div>
-    </>
+      </div>
+    </section>
   )
 }
 
