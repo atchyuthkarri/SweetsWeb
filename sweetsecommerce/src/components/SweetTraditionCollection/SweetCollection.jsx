@@ -8,7 +8,7 @@ import img1 from "../../assets/Ajmerikalakand.webp";
 import img2 from "../../assets/Baklava.webp";
 import img3 from "../../assets/pickles.webp";
 import img4 from "../../assets/signature_specialities.webp";
-import img5 from "../../assets/spicy_powders.webp";
+import img5 from "../../assets/GPRS5982.jpg";
 import img6 from "../../assets/cake_and_cookie_treats.webp";
 import img7 from "../../assets/khara_snacks.webp";
 import img8 from "../../assets/jaggery_sweets.webp";
@@ -42,7 +42,7 @@ const SweetCollection = () => {
   className="mySwiper"
   breakpoints={{
     320: { slidesPerView: 1 },
-    480: { slidesPerView: 2 },
+    480: { slidesPerView: 1 },
     768: { slidesPerView: 3 },
     1024: { slidesPerView: 4 },
   }}
