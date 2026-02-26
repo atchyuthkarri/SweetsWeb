@@ -32,15 +32,7 @@ const Products = ({ variant = "slider" }) => {
     [activeCategory]
   );
 
-  const [qtyById, setQtyById] = useState(() =>
-    allProducts.reduce((acc, item) => { acc[item.id] = 1; return acc; }, {})
-  );
 
-  const setQty = (id, nextQty) =>
-    setQtyById((prev) => ({
-      ...prev,
-      [id]: Math.max(1, Number.isFinite(nextQty) ? nextQty : 1),
-    }));
 
   return (
     <section className={`bestsellers bestsellers--${variant}`}>
@@ -76,9 +68,6 @@ const Products = ({ variant = "slider" }) => {
             <ProductCard
               key={item.id}
               item={item}
-              qty={qtyById[item.id] || 1}
-              onDecrement={() => setQty(item.id, (qtyById[item.id] || 1) - 1)}
-              onIncrement={() => setQty(item.id, (qtyById[item.id] || 1) + 1)}
               style={{ animationDelay: `${index * 0.08}s` }}
             />
           ))

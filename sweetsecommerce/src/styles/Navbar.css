@@ -15,12 +15,12 @@
   backdrop-filter: blur(0px);
 }
 
-/* .navbar.scrolled {
-  --nav-bg: rgba(234, 224, 207, 0.95);
+.navbar.scrolled {
+  --nav-bg: #EAE0CF;
   --nav-text: #213448;
   background: var(--nav-bg);
   box-shadow: 0 4px 16px rgba(33, 52, 72, 0.15);
-} */
+}
 
 .navcontainer {
   width: clamp(300px, 90%, 1200px);
