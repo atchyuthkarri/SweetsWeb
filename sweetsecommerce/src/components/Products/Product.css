@@ -1,210 +1,161 @@
-.products {
-  padding: clamp(16px, 3vw, 32px) clamp(4%, 6vw, 8%);
-  margin-top: clamp(16px, 2.5vw, 32px);
-  background-color: var(--bg-color);
-  box-sizing: border-box;
-}
+/* =========================================================
+   BESTSELLERS SECTION
+   ========================================================= */
 
-/* Heading */
-.products h2 {
-  text-align: center;
-  margin-bottom: clamp(16px, 2.5vw, 24px);
-  color: var(--heading-color);
-  font-size: clamp(24px, 4vw, 48px);
-  font-family: "M-Heading-Font";
-  font-weight: 400;
-  line-height: 1.2;
-}
-
-/* Title row */
 .bestsellers {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: clamp(12px, 2vw, 24px);
-  margin-bottom: clamp(16px, 2.5vw, 24px);
-  flex-wrap: wrap;
+  position: relative;
+  background-color: #EAE0CF;
+  padding: clamp(40px, 5vw, 70px) 0;
 }
 
-/* Category buttons */
-.bestsellerbuttons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: clamp(8px, 1.5vw, 18px);
-  margin-bottom: clamp(16px, 2.5vw, 32px);
-  flex-wrap: wrap;
-  padding: 0 clamp(8px, 2vw, 16px);
+/* ── Section header ── */
+.bestsellers__header {
+  text-align: center;
+  margin: 0 auto clamp(18px, 2.5vw, 28px);
+  padding: 0 24px;
 }
 
-.bestsellerbuttons button {
-  background: var(--surface-muted);
-  border: none;
-  width: clamp(120px, 15vw, 180px);
-  height: clamp(32px, 4vw, 42px);
-  font-size: clamp(12px, 2vw, 16px);
-  padding: clamp(4px, 1vw, 8px);
-  color: var(--heading-color);
-  border-radius: clamp(6px, 1vw, 8px);
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+.bestsellers__title {
+  font-family: "M-Heading-Font", Georgia, serif;
+  font-size: clamp(26px, 3.5vw, 46px);
+  font-weight: 400;
+  color: #213448;
+  line-height: 1.1;
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.bestsellers__title-arrow {
+  color: #547792;
+  font-size: 0.65em;
+  opacity: 0.85;
+  display: inline-block;
+}
+
+.bestsellers__title-arrow--right {
+  transform: scaleX(-1);
+}
+
+/* ── Filter pills / tabs ── */
+.bestsellers__filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: clamp(24px, 3vw, 40px);
+  padding: 0 24px;
+}
+
+.bestseller-pill {
+  background: transparent;
+  border: 1.5px solid #94B4C1;
+  color: #213448;
+  font-size: 13px;
+  font-family: inherit;
+  font-weight: 500;
+  padding: 8px 22px;
+  border-radius: 6px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  letter-spacing: 0.02em;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  transform: translateY(0) scale(1);
 }
 
-.bestsellerbuttons button:hover {
-  background: var(--primary-color);
-  color: var(--button-text);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(159, 43, 46, 0.2);
+.bestseller-pill:hover {
+  border-color: #547792;
+  background: rgba(148, 180, 193, 0.15);
+  color: #213448;
+  transform: translateY(-1px);
 }
 
-/* =========================
-   SCROLLABLE PRODUCT ROW
-========================= */
+.bestseller-pill:active {
+  transform: scale(0.96);
+}
 
-.product-grid {
+.bestseller-pill--active {
+  background: #213448;
+  border-color: #213448;
+  color: #EAE0CF;
+  font-weight: 600;
+  box-shadow: 0 4px 14px rgba(33, 52, 72, 0.25);
+  transform: translateY(0) scale(1);
+}
+
+.bestseller-pill--active:hover {
+  transform: translateY(0) scale(1);
+  /* prevent lift on active pill */
+}
+
+/* =========================================================
+   PRODUCT CAROUSEL
+   ========================================================= */
+
+.bestseller-grid--slider,
+.bestseller-grid--grid {
   display: flex;
-  gap: clamp(8px, 1.5vw, 16px) !important;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  gap: clamp(16px, 2vw, 24px);
   overflow-x: auto;
-  padding: clamp(16px, 2.5vw, 24px) clamp(8px, 2vw, 16px);
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-  box-sizing: border-box;
-}
+  padding: 16px 20px 32px 20px;
 
-@media (min-width: 1025px) {
-  .product-grid {
-    padding: clamp(16px, 2.5vw, 24px) calc(50vw - (5 * (20vw - 10px) + 4 * 16px) / 2);
-  }
-}
+  /* Center the cards block horizontally */
+  margin: 0 auto;
+  max-width: 1280px;
+  width: max-content;
+  max-width: calc(100vw - 20px);
 
-@media (min-width: 769px) and (max-width: 1024px) {
-  .product-grid {
-    padding: clamp(16px, 2.5vw, 24px) calc(50vw - (2 * (50vw - 8px) + 1 * 16px) / 2);
-  }
-}
-
-.products--grid .product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%/3), 1fr));
-  overflow-x: visible;
-  gap: clamp(16px, 2vw, 24px);
-  padding: clamp(16px, 2.5vw, 24px) clamp(4%, 6vw, 8%);
-}
-
-@media (max-width: 1200px) {
-  .products--grid .product-grid {
-    grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%/3), 1fr));
-  }
-}
-
-@media (max-width: 1024px) {
-  .products--grid .product-grid {
-    grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%/2), 1fr));
-  }
-}
-
-@media (max-width: 768px) {
-  .products--grid .product-grid {
-    grid-template-columns: 1fr;
-    gap: clamp(12px, 2vw, 20px);
-  }
-}
-
-.product-grid::-webkit-scrollbar {
-  display: none;
-}
-
-.product-grid {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
 
-/* Responsive adjustments */
-@media (max-width: 1024px) {
-  .products {
-    padding: clamp(12px, 2.5vw, 24px) clamp(3%, 5vw, 6%);
-    margin-top: clamp(12px, 2vw, 24px);
-  }
+@media (min-width: 1200px) {
 
-  .products h2 {
-    font-size: clamp(20px, 3.5vw, 32px);
-    margin-bottom: clamp(12px, 2vw, 20px);
-  }
-
-  .bestsellerbuttons button {
-    width: clamp(100px, 12vw, 140px);
-    height: clamp(28px, 3.5vw, 36px);
-    font-size: clamp(11px, 1.8vw, 14px);
+  .bestseller-grid--slider,
+  .bestseller-grid--grid {
+    justify-content: center;
+    width: 100%;
   }
 }
 
-@media (max-width: 768px) {
-  .products {
-    padding: clamp(8px, 2vw, 16px) clamp(2%, 4vw, 6%);
-    margin-top: clamp(8px, 1.5vw, 16px);
-  }
-
-  .products h2 {
-    font-size: clamp(18px, 3vw, 26px);
-    margin-bottom: clamp(8px, 1.5vw, 16px);
-  }
-
-  .bestsellerbuttons {
-    gap: clamp(6px, 1.2vw, 12px);
-    margin-bottom: clamp(8px, 1.5vw, 16px);
-  }
-
-  .bestsellerbuttons button {
-    width: clamp(80px, 10vw, 110px);
-    height: clamp(24px, 3vw, 34px);
-    font-size: clamp(10px, 1.5vw, 13px);
-  }
+.bestseller-grid--slider::-webkit-scrollbar,
+.bestseller-grid--grid::-webkit-scrollbar {
+  display: none;
 }
 
+/* Grid variant */
+.bestsellers--grid .bestseller-grid--grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  overflow-x: visible;
+  gap: clamp(14px, 2vw, 24px);
+  padding: 8px clamp(24px, 4vw, 64px) 20px;
+}
+
+/* ── Empty state ── */
+.bestsellers__empty {
+  flex-shrink: 0;
+  width: 100%;
+  text-align: center;
+  padding: clamp(40px, 5vw, 60px) 20px;
+  color: #547792;
+  font-size: 14px;
+  font-style: italic;
+}
+
+/* ── Responsive ── */
 @media (max-width: 480px) {
-  .products {
-    padding: clamp(6px, 1.5vw, 12px) clamp(1.5%, 3vw, 4%);
-    margin-top: clamp(6px, 1.2vw, 12px);
+  .bestsellers__filters {
+    gap: 6px;
   }
 
-  .products h2 {
-    font-size: clamp(16px, 2.5vw, 22px);
-    margin-bottom: clamp(6px, 1.2vw, 12px);
-  }
-
-  .bestsellerbuttons {
-    gap: clamp(4px, 1vw, 8px);
-    margin-bottom: clamp(6px, 1.2vw, 12px);
-  }
-
-  .bestsellerbuttons button {
-    width: clamp(60px, 8vw, 90px);
-    height: clamp(20px, 2.8vw, 30px);
-    font-size: clamp(9px, 1.3vw, 12px);
-    padding: clamp(2px, 0.8vw, 6px);
+  .bestseller-pill {
+    font-size: 12px;
+    padding: 7px 16px;
   }
 }
-
-@media (max-width: 360px) {
-  .products {
-    padding: 4px 2%;
-    margin-top: 4px;
-  }
-
-  .products h2 {
-    font-size: clamp(14px, 2vw, 18px);
-    margin-bottom: 4px;
-  }
-
-  .bestsellerbuttons button {
-    width: clamp(50px, 7vw, 70px);
-    height: clamp(18px, 2.5vw, 26px);
-    font-size: clamp(8px, 1.2vw, 11px);
-  }
-}
-
- 

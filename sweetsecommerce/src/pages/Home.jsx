@@ -12,14 +12,14 @@ import PageWrapper from '../components/PageWrapper'
 const Home = () => {
   return (
     <PageWrapper>
-        <Navbar/>
-        <Hero/>
-        <Product/>
-        <SweetCollection/>
-        <SpecialCollection/>
-        <TraditionBanner/>
-        <Blogs/>
-        <Footer/>
+      <Navbar />
+      <Hero />
+      <Product />
+      <SweetCollection />
+      {/* <SpecialCollection/> */}
+      <TraditionBanner />
+      <Blogs />
+      <Footer />
     </PageWrapper>
   )
 }

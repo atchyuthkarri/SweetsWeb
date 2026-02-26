@@ -1,183 +1,106 @@
-.card-item {
-  min-width: 340px;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 6px !important;
+/* =========================================================
+   BESTSELLER CARD — G Pulla Reddy style
+   ========================================================= */
+
+.bestseller-card {
+  flex: 0 0 auto;
+  width: 270px;
+  background: transparent;
+  cursor: default;
+  outline: none;
   scroll-snap-align: start;
   scroll-snap-stop: always;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  border-radius: clamp(12px, 2vw, 20px);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease;
+
+  /* Entrance animation */
+  opacity: 0;
+  animation: cardEntrance 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes cardEntrance {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.96);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.bestseller-card:hover .bestseller-card__image {
+  transform: scale(1.04);
+}
+
+/* ── Image wrapper ── */
+.bestseller-card__image-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 16px;
   overflow: hidden;
+  background: rgba(148, 180, 193, 0.2);
+  margin-bottom: 12px;
 }
 
-.card-item:hover {
-  transform: translateY(-4px);
-}
-
-.item-image {
-  width: 100% !important;
-  height: clamp(280px, 35vh, 380px) !important;
-  overflow: hidden;
-  border-radius: clamp(12px, 2vw, 20px) ;
-  -webkit-border-radius: clamp(12px, 2vw, 20px) ;
-  -moz-border-radius: clamp(12px, 2vw, 20px) ;
-  -ms-border-radius: clamp(12px, 2vw, 20px) ;
-  -o-border-radius: clamp(12px, 2vw, 20px) ;
-}
-
-.item-image img {
+/* ── Product image ── */
+.bestseller-card__image {
   width: 100%;
   height: 100%;
-  object-fit: cover;   /* looks better than contain */
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.item-details {
-  padding: clamp(6px, 1.5vw, 10px) 0;
+/* ── Details ── */
+.bestseller-card__details {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
-  font-size: clamp(16px, 2.5vw, 22px);
   text-align: center;
+  gap: 4px;
 }
 
-.buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: center;
+.bestseller-card__name {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #213448;
+  line-height: 1.35;
 }
 
-.countbutton {
-  width: clamp(90px, 12vw, 110px);
-  height: clamp(32px, 4vw, 38px);
-  font-size: clamp(12px, 1.8vw, 14px);
-  font-weight: 700;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 999px;
-  display: grid;
-  grid-template-columns: 32px 1fr 32px;
-  align-items: center;
-  justify-items: center;
-  background: white;
-}
-
-.qty-step {
-  width: 32px;
-  height: 36px;
-  border: 0;
-  background: transparent;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.qty-value {
+.bestseller-card__price {
+  margin: 0;
   font-size: 14px;
+  font-weight: 600;
+  color: #547792;
+  margin-bottom: 6px;
 }
 
-.cartbutton {
-  width: clamp(110px, 15vw, 140px);
-  height: clamp(32px, 4vw, 38px);
-  font-size: clamp(12px, 1.8vw, 14px);
-}
 
-@media (min-width: 1025px) {
-  .card-item {
-    min-width: calc(18vw - 10px) !important;
-    max-width: calc(18vw - 10px) !important;
-    scroll-snap-align: center;
-    scroll-snap-stop: always;
-  }
 
-  .item-image {
-    height: 320px !important;
-  }
-
-  .item-details {
-    font-size: 22px !important;
-    padding: 8px 0;
-  }
-}
-@media (max-width: 1024px) {
-  .card-item {
-    max-width: calc(45vw - 5px) !important;
-    min-width: calc(45vw - 5px) !important;
-    scroll-snap-align: center;
-    scroll-snap-stop: always;
-  }
-
-  .item-image {
-    height: 280px !important;
-  }
-
-  .item-details {
-    font-size: 20px !important;
-    padding: 6px 0;
-  }
-}
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
 
 @media (max-width: 768px) {
-  .product-grid {
-    gap: 0 !important;
-    padding: 20px 0;
-  }
-
-  .products .product-grid .card-item {
-    width: 75vw !important;
-    max-width: 75vw !important;
-    min-width: 75vw !important;
-    margin: 0 auto;
-    scroll-snap-align: center;
-    scroll-snap-stop: always;
-    flex-shrink: 0;
-  }
-
-  .products .product-grid .card-item .item-image {
-    height: clamp(200px, 28vh, 300px) !important;
-  }
-
-  .products .product-grid .card-item .item-details {
-    font-size: clamp(12px, 2vw, 16px) !important;
-    padding: clamp(4px, 1vw, 8px) 0;
-  }
-
-  .products .product-grid .card-item .cartbutton {
-    width: clamp(90px, 12vw, 110px) !important;
-    height: clamp(28px, 3.5vw, 40px) !important;
-    font-size: clamp(10px, 1.4vw, 12px) !important;
-  }
-
-  .products .product-grid .card-item .countbutton {
-    width: clamp(80px, 10vw, 100px) !important;
-    height: clamp(28px, 3.5vw, 40px) !important;
-    font-size: clamp(10px, 1.4vw, 12px) !important;
+  .bestseller-card {
+    width: 230px;
   }
 }
 
 @media (max-width: 480px) {
-  .product-grid {
-    gap: 0 !important;
-    padding: 20px 0;
+  .bestseller-card {
+    width: 75vw;
+    max-width: 280px;
   }
+}
 
-  .products .product-grid .card-item {
-    width: 70vw !important;
-    max-width: 70vw !important;
-    min-width: 70vw !important;
-    margin: 0 auto;
-    scroll-snap-align: center;
-    scroll-snap-stop: always;
-    flex-shrink: 0;
-  }
-
-  .products .product-grid .card-item .item-image {
-    height: clamp(180px, 25vh, 260px) !important;
-  }
-
-  .products .product-grid .card-item .item-details {
-    font-size: clamp(10px, 1.8vw, 14px) !important;
-    padding: clamp(3px, 0.8vw, 6px) 0;
-  }
+/* Grid variant override */
+.bestsellers--grid .bestseller-card {
+  flex: unset;
+  width: 100%;
 }
