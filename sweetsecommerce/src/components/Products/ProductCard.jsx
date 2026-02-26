@@ -1,43 +1,66 @@
 import React from "react";
-import "./ProductCard.css";
 import { useNavigate } from "react-router-dom";
+import "./ProductCard.css";
 
-const ProductCard = ({ item, qty = 1, onIncrement, onDecrement }) => {
+const ProductCard = ({ item, qty = 1, onIncrement, onDecrement, style }) => {
   const navigate = useNavigate();
 
-  const handleCardClick = () => {
-    // Navigate to product detail page using product ID
-    navigate(`/product/${item.id}`);
-  };
-
-  const handleButtonClick = (e) => {
-    // Stop event propagation to prevent card click when buttons are clicked
-    e.stopPropagation();
-  };
-
   return (
-    <div className="card-item" onClick={handleCardClick}>
-        <div className="item-image">
-          <img src={item.image} alt={item.name} />
+    <article
+      className="bestseller-card"
+      style={style}
+      onClick={() => navigate(`/product/${item.id}`)}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => e.key === "Enter" && navigate(`/product/${item.id}`)}
+      aria-label={`View ${item.name}`}
+    >
+      {/* ── Image ── */}
+      <div className="bestseller-card__image-wrap">
+        <img
+          src={item.image}
+          alt={item.name}
+          className="bestseller-card__image"
+          loading="lazy"
+        />
       </div>
-        <div className="item-details">
-            <p>{item.name}</p>
-            <p style={{color: "#1e3a8a"}}>{item.price}</p>
-            {/* <div className="buttons" onClick={handleButtonClick}>
-                <div className="countbutton" role="group" aria-label={`Quantity for ${item.name}`}>
-                  <button type="button" className="qty-step" onClick={(e) => { e.stopPropagation(); onDecrement(); }} aria-label="Decrease quantity">
-                    -
-                  </button>
-                  <span className="qty-value" aria-live="polite">{qty}</span>
-                  <button type="button" className="qty-step" onClick={(e) => { e.stopPropagation(); onIncrement(); }} aria-label="Increase quantity">
-                    +
-                  </button>
-                </div>
-                <button className="cartbutton" onClick={(e) => { e.stopPropagation(); }}>ADD TO BAG</button>
-            </div> */}
 
+      {/* ── Details ── */}
+      <div className="bestseller-card__details">
+        <h3 className="bestseller-card__name">{item.name}</h3>
+        <p className="bestseller-card__price">{item.price}</p>
+
+        {/* ── Quantity + Add to Bag row ── */}
+        <div
+          className="bestseller-card__actions"
+          onClick={(e) => e.stopPropagation()}
+        >
+          <div className="bestseller-card__qty" role="group" aria-label={`Quantity for ${item.name}`}>
+            <button
+              type="button"
+              className="bestseller-card__qty-btn"
+              onClick={(e) => { e.stopPropagation(); onDecrement(); }}
+              aria-label="Decrease quantity"
+            >−</button>
+            <span className="bestseller-card__qty-val" aria-live="polite">{qty}</span>
+            <button
+              type="button"
+              className="bestseller-card__qty-btn"
+              onClick={(e) => { e.stopPropagation(); onIncrement(); }}
+              aria-label="Increase quantity"
+            >+</button>
+          </div>
+
+          <button
+            type="button"
+            className="bestseller-card__add-btn"
+            onClick={(e) => { e.stopPropagation(); }}
+          >
+            ADD TO BAG
+          </button>
         </div>
-    </div>
+      </div>
+    </article>
   );
 };
 

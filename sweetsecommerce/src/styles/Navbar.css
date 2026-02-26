@@ -1,7 +1,10 @@
 .navbar {
-  width: 100vw;
+  --nav-bg: #213448;
+  --nav-text: #EAE0CF;
+  width: 100%;
+  left: 0;
   height: clamp(60px, 12vh, 80px);
-  background: var(--bg-color);
+  background: var(--nav-bg);
   position: fixed;
   top: 0;
   z-index: 1000;
@@ -12,10 +15,12 @@
   backdrop-filter: blur(0px);
 }
 
-.navbar.scrolled {
-  background: rgba(248, 249, 250, 1);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
-}
+/* .navbar.scrolled {
+  --nav-bg: rgba(234, 224, 207, 0.95);
+  --nav-text: #213448;
+  background: var(--nav-bg);
+  box-shadow: 0 4px 16px rgba(33, 52, 72, 0.15);
+} */
 
 .navcontainer {
   width: clamp(300px, 90%, 1200px);
@@ -81,7 +86,7 @@
   border-radius: 4px;
   transition: all 0.3s ease;
   position: relative;
-  color: var(--heading-color);
+  color: var(--nav-text);
   text-decoration: none;
   font-weight: 500;
   white-space: nowrap;
@@ -90,8 +95,7 @@
 }
 
 .navlinks a:hover {
-  color: var(--primary-color);
-  background: rgba(30, 58, 138, 0.08);
+  color: var(--surface-color);
   transform: translateY(-2px);
 }
 
@@ -102,13 +106,13 @@
   left: 50%;
   width: 0;
   height: 2px;
-  background: var(--primary-color);
+  background: var(--surface-color);
   transition: all 0.3s ease;
   transform: translateX(-50%);
 }
 
 .navlinks a:hover::after {
-  width: 100%;
+  width: 80%;
 }
 
 .navlinks a:hover {
@@ -130,13 +134,13 @@
 .hamburger span {
   width: clamp(16px, 2vw, 20px);
   height: 2px;
-  background: var(--heading-color);
+  background: var(--nav-text);
   border-radius: 2px;
   transition: all 0.3s ease;
 }
 
 .hamburger:hover {
-  background: rgba(30, 58, 138, 0.1);
+  background: rgba(141, 153, 165, 0.1);
 }
 
 .hamburger.active span:nth-child(1) {
@@ -161,12 +165,12 @@
 }
 
 .carticon:hover {
-  background: rgba(30, 58, 138, 0.1);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .carticon .material-symbols-outlined {
   font-size: clamp(18px, 2vw, 22px);
-  color: var(--heading-color);
+  color: var(--nav-text);
   transition: all 0.3s ease;
 }
 
@@ -198,9 +202,9 @@
 }
 
 .scroll-to-top:hover {
-  background: #1e40af;
+  background: var(--secondary-color);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(30, 58, 95, 0.4);
+  box-shadow: 0 6px 20px rgba(33, 52, 72, 0.4);
 }
 
 .scroll-to-top:active {
@@ -251,7 +255,7 @@
     left: 0;
     height: 100vh;
     width: clamp(280px, 75vw, 350px);
-    background: var(--bg-color);
+    background: var(--nav-bg);
     padding: clamp(60px, 15vh, 120px) clamp(16px, 4vw, 28px);
     flex-direction: column;
     gap: clamp(12px, 2vw, 24px);
@@ -275,14 +279,14 @@
     border-radius: 4px;
     transition: all 0.3s ease;
     position: relative;
-    color: var(--heading-color);
+    color: var(--nav-text);
     text-decoration: none;
     font-weight: 500;
   }
 
   .navlinks a:hover {
     color: var(--primary-color);
-    background: rgba(30, 58, 138, 0.08);
+    background: rgba(33, 52, 72, 0.08);
     transform: translateY(-2px);
   }
 
@@ -316,7 +320,7 @@
     position: absolute;
     top: clamp(20px, 4vh, 30px);
     right: clamp(20px, 4vw, 30px);
-    color: var(--heading-color);
+    color: var(--nav-text);
     font-size: clamp(20px, 4vw, 28px);
     font-weight: 300;
     cursor: pointer;
@@ -324,7 +328,7 @@
     opacity: 0;
     transform: scale(0.8);
     z-index: 1200;
-    background: rgba(30, 58, 138, 0.1);
+    background: rgba(33, 52, 72, 0.1);
     width: clamp(36px, 5vw, 44px);
     height: clamp(36px, 5vw, 44px);
     border-radius: 50%;
@@ -340,7 +344,7 @@
 
   .navlinks::before:hover {
     color: var(--primary-color);
-    background: rgba(30, 58, 138, 0.2);
+    background: rgba(175, 182, 190, 0.573);
     transform: scale(1.1);
   }
 }
@@ -363,6 +367,11 @@
   .navlinks a {
     padding: 12px 18px;
     font-size: clamp(15px, 2.8vw, 17px);
+    color: var(--nav-text);
+  }
+
+  .navlinks a:hover {
+    color: var(--surface-color);
   }
 
   .hamburger span {

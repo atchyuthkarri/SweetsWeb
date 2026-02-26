@@ -3,8 +3,9 @@
 =========================== */
 .premium-footer {
   width: 100%;
-  background: #1e3a8a;
-  color: #d1d5db;
+  background: #213448;
+  /* Dark Premium Blue */
+  color: #94B4C1;
   padding: clamp(40px, 6vw, 80px) clamp(16px, 3vw, 40px) clamp(30px, 4vw, 60px);
   position: relative;
   overflow: hidden;
@@ -23,8 +24,13 @@
 }
 
 @keyframes subtleRotate {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .footer-container {
@@ -50,7 +56,7 @@
 .section-title {
   font-size: clamp(18px, 2.5vw, 24px);
   font-weight: 600;
-  color: #f3f4f6;
+  color: #EAE0CF;
   margin: 0;
   font-family: "M-Heading-Font";
   letter-spacing: 0.05em;
@@ -65,7 +71,7 @@
   left: 0;
   width: 30px;
   height: 1px;
-  background: #9ca3af;
+  background: #94B4C1;
   border-radius: 1px;
 }
 
@@ -79,7 +85,7 @@
 }
 
 .footer-link {
-  color: #d1d5db;
+  color: #94B4C1;
   text-decoration: none;
   font-size: clamp(14px, 1.8vw, 16px);
   font-family: "M-Body-Font";
@@ -96,14 +102,14 @@
   transform: translateY(-50%);
   width: 3px;
   height: 3px;
-  background: #9ca3af;
+  background: #94B4C1;
   border-radius: 50%;
   opacity: 0;
   transition: all 0.3s ease;
 }
 
 .footer-link:hover {
-  color: #f3f4f6;
+  color: #EAE0CF;
   padding-left: 16px;
 }
 
@@ -130,7 +136,7 @@
 .brand-name {
   font-size: clamp(20px, 2.8vw, 28px);
   font-weight: 700;
-  color: #f3f4f6;
+  color: #EAE0CF;
   margin: 0;
   font-family: "M-Heading-Font";
   letter-spacing: -0.02em;
@@ -138,7 +144,7 @@
 
 .brand-tagline {
   font-size: clamp(12px, 1.5vw, 14px);
-  color: #9ca3af;
+  color: #94B4C1;
   margin: 0;
   font-family: "M-Body-Font";
   font-style: italic;
@@ -153,7 +159,7 @@
 
 .copyright {
   font-size: clamp(12px, 1.5vw, 14px);
-  color: #9ca3af;
+  color: #94B4C1;
   margin: 0;
   font-family: "M-Body-Font";
 }
@@ -166,14 +172,14 @@
 }
 
 .legal-link {
-  color: #9ca3af;
+  color: #94B4C1;
   text-decoration: none;
   font-family: "M-Body-Font";
   transition: color 0.3s ease;
 }
 
 .legal-link:hover {
-  color: #f3f4f6;
+  color: #EAE0CF;
 }
 
 /* Expandable functionality - Mobile only */
@@ -216,18 +222,18 @@
   .premium-footer {
     padding: clamp(20px, 3vw, 40px) clamp(12px, 2.5vw, 24px) clamp(15px, 2.5vw, 30px);
   }
-  
+
   .footer-grid {
     grid-template-columns: 1fr;
     gap: clamp(12px, 2vw, 24px);
     margin-bottom: clamp(20px, 3vw, 35px);
   }
-  
+
   .footer-section {
     border-bottom: 1px solid rgba(30, 58, 138, 0.1);
     padding-bottom: clamp(8px, 1.5vw, 16px);
   }
-  
+
   .section-header {
     display: flex;
     justify-content: space-between;
@@ -235,35 +241,35 @@
     cursor: pointer;
     margin-bottom: 0;
   }
-  
+
   .expand-button {
     display: flex;
   }
-  
+
   .expand-button:hover {
     background: rgba(30, 58, 138, 0.1);
   }
-  
+
   .section-links {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease, opacity 0.3s ease;
     opacity: 0;
   }
-  
+
   .section-links.expanded {
     max-height: 300px;
     opacity: 1;
     margin-top: clamp(8px, 1.5vw, 16px);
   }
-  
+
   .footer-bottom {
     flex-direction: column;
     align-items: center;
     text-align: center;
     gap: clamp(8px, 1.5vw, 16px);
   }
-  
+
   .footer-legal {
     align-items: center;
   }
@@ -273,16 +279,16 @@
   .premium-footer {
     padding: clamp(16px, 3vw, 32px) clamp(10px, 2vw, 20px) clamp(12px, 2vw, 24px);
   }
-  
+
   .footer-grid {
     grid-template-columns: 1fr;
     gap: clamp(10px, 2vw, 20px);
   }
-  
+
   .section-title::after {
     width: 20px;
   }
-  
+
   .expand-button .material-symbols-outlined {
     font-size: 18px;
   }
@@ -495,12 +501,12 @@
     gap: 40px;
     padding: 40px 40px;
   }
-  
+
   .footer-title {
     font-size: 15px;
     margin-bottom: 18px;
   }
-  
+
   .contact-item {
     padding: 12px 16px;
     gap: 12px;
@@ -513,17 +519,17 @@
     gap: 30px;
     padding: 30px 30px;
   }
-  
+
   .footer-title {
     font-size: 14px;
     margin-bottom: 16px;
   }
-  
+
   .contact-item {
     padding: 10px 14px;
     gap: 10px;
   }
-  
+
   .contact-icon {
     font-size: 16px;
   }
@@ -533,17 +539,17 @@
   .footer-content {
     padding: 20px 20px;
   }
-  
+
   .footer-title {
     font-size: 13px;
     margin-bottom: 14px;
   }
-  
+
   .contact-item {
     padding: 8px 12px;
     gap: 8px;
   }
-  
+
   .contact-icon {
     font-size: 14px;
   }

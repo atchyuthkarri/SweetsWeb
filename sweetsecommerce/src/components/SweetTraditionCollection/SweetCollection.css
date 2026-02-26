@@ -46,7 +46,7 @@
   justify-content: center;
   align-items: center;
   color: var(--text-color);
-  padding: clamp(30px, 4vw, 40px);
+  padding: 10px;
   width: 60%;
 }
 
@@ -77,21 +77,21 @@
   .SweetCollection {
     gap: clamp(16px, 3vw, 30px);
   }
-  
+
   .content-items {
     width: 80%;
     padding: clamp(20px, 4vw, 40px);
   }
-  
+
   .content-items h1 {
     font-size: clamp(28px, 4vw, 30px);
   }
-  
+
   .content-items img {
     width: clamp(50px, 8vw, 120px);
     max-width: clamp(250px, 60%, 700px);
   }
-  
+
   .content-description {
     max-width: clamp(250px, 60%, 700px);
   }
@@ -102,21 +102,21 @@
   .SweetCollection {
     gap: clamp(12px, 3vw, 30px);
   }
-  
+
   .content-items {
     width: 90%;
     padding: clamp(15px, 4vw, 40px);
   }
-  
+
   .content-items h1 {
     font-size: clamp(24px, 4vw, 30px);
   }
-  
+
   .content-items img {
     width: clamp(45px, 8vw, 120px);
     max-width: clamp(200px, 60%, 700px);
   }
-  
+
   .content-description {
     max-width: clamp(200px, 60%, 700px);
   }
@@ -127,21 +127,21 @@
   .SweetCollection {
     gap: clamp(10px, 3vw, 30px);
   }
-  
+
   .content-items {
     width: 100%;
     padding: clamp(12px, 4vw, 40px);
   }
-  
+
   .content-items h1 {
     font-size: clamp(20px, 4vw, 30px);
   }
-  
+
   .content-items img {
     width: clamp(40px, 8vw, 120px);
     max-width: clamp(180px, 60%, 700px);
   }
-  
+
   .content-description {
     max-width: clamp(180px, 60%, 700px);
   }
@@ -212,7 +212,7 @@
   color: var(--button-text);
   border-color: var(--primary-color);
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(159, 43, 46, 0.2);
+  box-shadow: 0 4px 12px rgba(33, 52, 72, 0.2);
 }
 
 /* ===== Title below Card ===== */
