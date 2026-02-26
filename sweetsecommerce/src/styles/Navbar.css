@@ -23,7 +23,7 @@
 }
 
 .navcontainer {
-  width: clamp(300px, 90%, 1200px);
+  width: clamp(300px, 95%, 1600px);
   height: 100%;
   margin: auto;
   display: flex;
