@@ -61,8 +61,8 @@ const Navbar = () => {
     <>
       {/* Overlay - Only show when menu is open */}
       {menuOpen && (
-        <div 
-          className="menu-overlay active" 
+        <div
+          className="menu-overlay active"
           onClick={handleNavClick}
           style={{ zIndex: 1050 }}
         ></div>
@@ -85,6 +85,13 @@ const Navbar = () => {
               <span></span>
               <span></span>
             </div>
+
+            {/* Home Icon */}
+            <Link to="/" className="home-icon" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }} aria-label="Home">
+              <span className="material-symbols-outlined" style={{ fontSize: 'clamp(24px, 3vw, 28px)', color: 'var(--nav-text)' }}>
+                home
+              </span>
+            </Link>
           </div>
 
           {/* Nav Links */}
@@ -115,8 +122,8 @@ const Navbar = () => {
 
       {/* Scroll to Top Button */}
       {showScrollTop && (
-        <button 
-          className={`scroll-to-top ${showScrollTop ? 'visible' : ''}`} 
+        <button
+          className={`scroll-to-top ${showScrollTop ? 'visible' : ''}`}
           onClick={scrollToTop}
           aria-label="Scroll to top"
         >

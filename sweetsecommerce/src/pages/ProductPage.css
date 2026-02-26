@@ -2,7 +2,7 @@
 
 .sp-page {
   min-height: 100vh;
-  background: #ffffff;
+  background: #EAE0CF;
   animation: fadeIn 0.6s ease-in;
 }
 
@@ -11,6 +11,7 @@
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -18,8 +19,8 @@
 }
 
 .sp-topbar {
-  background: #2563eb;
-  color: white;
+  background: #213448;
+  color: #EAE0CF;
   text-align: center;
   padding: 8px 16px;
   font-size: 12px;
@@ -32,16 +33,16 @@
 }
 
 .sp-hero {
-  background: white;
+  background: transparent;
   padding: clamp(10px, 6vw, 10px) clamp(10px, 4vw, 10px);
   text-align: center;
-  border-bottom: 1px solid #072ab5;
+  border-bottom: 1px solid #94B4C1;
 }
 
 .sp-title {
   font-size: clamp(28px, 4vw, 48px);
   font-weight: 400;
-  color: #043090;
+  color: #213448;
   font-family: 'Playfair Display', serif;
   margin: 0 0 16px 0;
   letter-spacing: -0.5px;
@@ -49,7 +50,7 @@
 
 .sp-breadcrumb {
   font-size: 14px;
-  color: #435783;
+  color: #547792;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -57,7 +58,7 @@
 }
 
 .sp-sep {
-  color: #043bb1;
+  color: #94B4C1;
 }
 
 .sp-content {
@@ -77,7 +78,7 @@
 .sp-filters-title {
   font-size: 18px;
   font-weight: 600;
-  color: #2563eb;
+  color: #213448;
   margin: 0 0 24px 0;
 }
 
@@ -92,17 +93,17 @@
   padding: 12px 0;
   font-size: 14px;
   font-weight: 600;
-  color: #2563eb;
+  color: #213448;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #f1f5f9;
+  border-bottom: 1px solid #94B4C1;
   transition: all 0.3s ease;
 }
 
 .sp-filter-header:hover {
-  color: #1d4ed8;
+  color: #547792;
 }
 
 .sp-caret {
@@ -120,13 +121,13 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 8px ;
+  padding: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .sp-check:hover {
-  color: #2563eb;
+  color: #213448;
 }
 
 .sp-check input[type="checkbox"] {
@@ -135,12 +136,12 @@
   border: 2px solid #d1d5db;
   border-radius: 4px;
   cursor: pointer;
-  accent-color: #000818;
+  accent-color: #213448;
 }
 
 .sp-check-label {
   font-size: 14px;
-  color: #000000;
+  color: #213448;
   font-weight: 500;
 }
 
@@ -157,8 +158,8 @@
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: #0d368e;
-  color: white;
+  background: #213448;
+  color: #EAE0CF;
   border: none;
   border-radius: 50%;
   width: 60px;
@@ -171,7 +172,7 @@
 }
 
 .sp-mobile-filter-toggle:hover {
-  background: #0238cd;
+  background: #547792;
   transform: scale(1.1);
 }
 
@@ -183,7 +184,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.293);
   z-index: 999;
 }
 
@@ -194,7 +195,7 @@
   left: -300px;
   width: 280px;
   height: 100vh;
-  background: white;
+  background: #EAE0CF;
   z-index: 1001;
   overflow-y: auto;
   transition: left 0.3s ease;
@@ -214,7 +215,7 @@
   border: none;
   font-size: 24px;
   cursor: pointer;
-  color: #000000;
+  color: #213448;
   z-index: 1002;
 }
 
@@ -224,23 +225,23 @@
   align-items: center;
   margin-bottom: 32px;
   padding-bottom: 16px;
-  border-bottom: 1px solid #f1f5f9;
+  border-bottom: 1px solid #94B4C1;
 }
 
 .sp-sort {
-  background: white;
-  border: 1px solid #e5e7eb;
+  background: transparent;
+  border: 1px solid #94B4C1;
   border-radius: 8px;
   padding: 8px 16px;
   font-size: 14px;
-  color: #2563eb;
+  color: #213448;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .sp-sort:hover {
-  border-color: #2563eb;
-  color: #2563eb;
+  border-color: #213448;
+  color: #213448;
 }
 
 .sp-sort-caret {
@@ -265,6 +266,7 @@
     opacity: 0;
     transform: scale(0.95);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
@@ -294,7 +296,7 @@
   width: 100%;
   height: 280px;
   overflow: hidden;
-  background: #f8fafc;
+  background: rgba(148, 180, 193, 0.2);
   border-radius: 16px;
   margin-bottom: 16px;
   padding: 0;
@@ -318,8 +320,8 @@
   position: absolute;
   top: 12px;
   left: 12px;
-  background: #053bb0;
-  color: white;
+  background: #213448;
+  color: #EAE0CF;
   padding: 4px 8px;
   border-radius: 4px;
   font-size: 11px;
@@ -337,7 +339,7 @@
 .sp-name {
   display: block;
   font-size: 18px;
-  color: #000001 !important;
+  color: #213448 !important;
   text-decoration: none;
   margin-bottom: 8px;
   line-height: 1.4;
@@ -346,22 +348,22 @@
 }
 
 .sp-name:hover {
-  color: #05298d !important;
+  color: #547792 !important;
 }
 
 .sp-name-link {
-  color: #000005dd !important;
+  color: #547792 !important;
   text-decoration: none;
 }
 
 .sp-name-link:hover {
-  color: #1d4ed8 !important;
+  color: #213448 !important;
 }
 
 .sp-price {
   font-size: 18px;
   font-weight: 800;
-  color: #0347b6;
+  color: #213448;
   margin-bottom: 16px;
 }
 
@@ -371,11 +373,12 @@
 }
 
 .sp-qty {
-  display: none; /* Hide quantity selector */
+  display: none;
+  /* Hide quantity selector */
 }
 
 .sp-qty-btn {
-  background: white;
+  background: transparent;
   border: none;
   width: 32px;
   height: 32px;
@@ -389,8 +392,8 @@
 }
 
 .sp-qty-btn:hover {
-  background: #f8fafc;
-  color: #2563eb;
+  background: rgba(148, 180, 193, 0.2);
+  color: #213448;
 }
 
 .sp-qty-value {
@@ -404,8 +407,8 @@
 }
 
 .sp-add {
-  background: #0d368e;
-  color: white;
+  background: #213448;
+  color: #EAE0CF;
   border: none;
   border-radius: 8px;
   padding: 12px 24px;
@@ -420,7 +423,7 @@
 }
 
 .sp-add:hover {
-  background: #0238cd;
+  background: #547792;
   transform: translateY(-2px);
   box-shadow: 0 8px 16px rgba(37, 99, 235, 0.3);
 }
@@ -435,12 +438,12 @@
 }
 
 .sp-page-btn {
-  background: white;
-  border: 1px solid #e5e7eb;
+  background: transparent;
+  border: 1px solid #94B4C1;
   border-radius: 6px;
   padding: 8px 12px;
   font-size: 14px;
-  color: #2563eb;
+  color: #213448;
   cursor: pointer;
   transition: all 0.3s ease;
   min-width: 40px;
@@ -449,17 +452,17 @@
 }
 
 .sp-page-btn:hover:not(:disabled) {
-  background: #f8fafc;
-  border-color: #2563eb;
-  color: #2563eb;
+  background: rgba(148, 180, 193, 0.2);
+  border-color: #213448;
+  color: #213448;
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(37, 99, 235, 0.2);
 }
 
 .sp-page-btn--active {
-  background: #2563eb;
-  border-color: #2563eb;
-  color: white;
+  background: #213448;
+  border-color: #213448;
+  color: #EAE0CF;
   transform: scale(1.05);
   box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
 }
@@ -484,35 +487,36 @@
   .sp-content {
     flex-direction: column;
   }
-  
+
   .sp-filters {
-    display: none; /* Hide desktop sidebar on tablet */
+    display: none;
+    /* Hide desktop sidebar on tablet */
   }
-  
+
   .sp-products {
     order: 1;
     width: 100%;
   }
-  
+
   .sp-grid {
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   }
-  
+
   /* Show mobile filter elements on tablet and below */
   .sp-mobile-filter-toggle {
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  
+
   .sp-mobile-filter-overlay {
     display: none;
   }
-  
+
   .sp-mobile-filter-overlay.active {
     display: block;
   }
-  
+
   .sp-mobile-filter-sidebar {
     display: block;
   }
@@ -523,19 +527,19 @@
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 40px;
   }
-  
+
   .sp-img-wrap {
     height: 240px;
   }
-  
+
   .sp-card-body {
     padding: 16px;
   }
-  
+
   .sp-pagination {
     gap: 4px;
   }
-  
+
   .sp-page-btn {
     padding: 6px 10px;
     font-size: 13px;
@@ -545,30 +549,34 @@
 
 @media (max-width: 480px) {
   .sp-grid {
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    grid-template-columns: 1fr;
+    /* Single column for mobile */
     gap: 30px;
+    padding: 0 10px;
+    /* Add some padding to prevent edge touching */
   }
-  
+
   .sp-img-wrap {
-    height: 200px;
+    height: 300px;
+    /* Increase image height for better mobile experience */
   }
-  
+
   .sp-card-body {
     padding: 12px;
   }
-  
+
   .sp-name {
     font-size: 16px;
   }
-  
+
   .sp-price {
     font-size: 16px;
   }
-  
+
   .sp-pagination {
     gap: 2px;
   }
-  
+
   .sp-page-btn {
     padding: 4px 8px;
     font-size: 12px;
@@ -585,7 +593,7 @@
     margin: 0 auto;
     padding: clamp(32px, 5vw, 64px) clamp(20px, 4vw, 40px);
   }
-  
+
   .sp-filters {
     display: block;
     width: 280px;
@@ -594,13 +602,13 @@
     top: 100px;
     height: fit-content;
   }
-  
+
   .sp-products {
     flex: 1;
     min-width: 0;
     overflow-x: hidden;
   }
-  
+
   /* Hide mobile filter elements on desktop */
   .sp-mobile-filter-toggle,
   .sp-mobile-filter-overlay,
